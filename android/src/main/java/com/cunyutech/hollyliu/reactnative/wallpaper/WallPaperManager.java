@@ -106,7 +106,6 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                             .load(Base64.decode(source.replaceAll("data:image\\/.*;base64,", ""), Base64.DEFAULT))
                             .asBitmap()
                             .toBytes()
-                            .centerCrop()
                             .into(simpleTarget);
                     }catch (Exception e) {
                         sendMessage("error","Exception in Glide：" + e.getMessage(),source);
@@ -163,7 +162,6 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                             .load(mUri)
                             .asBitmap()
                             .toBytes()
-                            .centerCrop()
                             .into(simpleTarget);
                     }catch (Exception e) {
                         sendMessage("error","Exception in Glide：" + e.getMessage(),source);
@@ -180,7 +178,6 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                             .load(mUri)
                             .asBitmap()
                             .toBytes()
-                            .centerCrop()
                             .into(simpleTarget);
                     }catch (Exception e) {
                         sendMessage("error","Exception in Glide：" + e.getMessage(),source);
@@ -208,7 +205,6 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                             .load(new GlideUrl(mUri.toString(), lazyHeaders.build()))
                             .asBitmap()
                             .toBytes()
-                            .centerCrop()
                             .into(simpleTarget);
                     }catch (Exception e) {
                         sendMessage("error","Exception in Glide：" + e.getMessage(),source);
